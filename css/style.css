@@ -52,7 +52,7 @@ header img{
 }
 .loghi-header i{
   padding:0 8px;
-  font-size: 25px;
+  font-size: 20px;
   color:rgb(177,177,177);
 }
 .header-right{
@@ -66,17 +66,26 @@ header img{
   line-height: 25px;
   display: inline-block;
   font-size: 13px;
+  vertical-align: middle;
 }
 .nome-accesso span{
   padding-left: 15px;
 }
 
 /* MAIN */
+main::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.main-left{
+  width:30%;
+  float: left;
+}
 .blu{
   height: 80px;
   line-height: 80px;
   background-color: rgb(142,218,252);
-  width:30%;
   padding-left: 10px;
   vertical-align: middle;
 }
@@ -100,7 +109,6 @@ header img{
   display: table;
 }
 .search{
-  width:30%;
   height: 65px;
   line-height: 65px;
   font-size: 15px;
@@ -127,21 +135,63 @@ header img{
 .search i{
   color: rgb(177,177,177);
 }
+.main-sx-list{
+  overflow-y: scroll;
+  height: calc(100vh - 325px);
+}
+.main-sx-list a {
+  color:black;
+  text-decoration: none;
+}
 .name{
-  padding-top: 20px;
+  padding:15px 0;
+  border-top: 0.7px lightgrey solid;
 }
-.name::after{
-  clear: both;
-  display: table;
-  content: "";
-}
-.name img{
-  float: left;
+.nome-access{
+  display: inline-block;
+  font-size: 13px;
   vertical-align: middle;
 }
-.name span{
-  float: left;
+.name img{
+  vertical-align: middle;
+}
+.main-sx-list .name:hover{
+  background-color: rgb(233,235,235);
 }
 .ora{
+  font-size: 13px;
+  display: inline-block;
   float: right;
+  padding-right: 10px;
+}
+.main-right{
+  float: left;
+  background-image: url(../img/mine.jpg);
+  height:calc(100vh - 280px);
+  width: 70%;
+  overflow-y: scroll;
+}
+.chat{
+  float: left;
+  height: 100px;
+  background-color: rgb(243,238,234);
+  width: 70%;
+  overflow-y:none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.chat i{
+  color: rgb(107,115,118);
+  font-size: 23px;
+}
+.chat input{
+  border: 1px solid lightgrey;
+  width: 80%;
+  font-size: 20px;
+  padding: 15px;
+  border-radius: 10px;
+}
+.chat input::placeholder{
+  color: lightgrey;
 }
