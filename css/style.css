@@ -6,5 +6,142 @@
 }
 body{
   font-family: 'Open Sans', sans-serif;
+  background-color:rgb(219,219,210);
+}
+.green{
+  height: 200px;
+  background-color: rgb(0,150,136);
+  padding :40px 0;
+}
+.container{
+  height: calc(100vh - 80px);
+  max-width: 1200px;
+  margin:auto;
+  background-color: white;
+}
+img{
+  height: 70px;
+  width: 70px;
+  border-radius: 100%;
+}
+#accesso{
+  color:rgb(177,177,177);
+}
+li{
+  list-style: none;
 }
 /* GENERALE */
+
+/* HEADER */
+header{
+  display: flex;
+}
+.header-left{
+  width: 30%;
+  background-color: rgb(234,234,234);
+  height: 100px;
+  line-height: 100px;
+  border-right: lightgrey solid 1px;
+  padding: 0 15px;
+}
+header img{
+  vertical-align: middle;
+}
+.loghi-header{
+  float: right;
+}
+.loghi-header i{
+  padding:0 8px;
+  font-size: 25px;
+  color:rgb(177,177,177);
+}
+.header-right{
+  background-color: rgb(234,234,234);
+  height: 100px;
+  line-height: 100px;
+  width:70%;
+  padding: 0 15px;
+}
+.nome-accesso{
+  line-height: 25px;
+  display: inline-block;
+  font-size: 13px;
+}
+.nome-accesso span{
+  padding-left: 15px;
+}
+
+/* MAIN */
+.blu{
+  height: 80px;
+  line-height: 80px;
+  background-color: rgb(142,218,252);
+  width:30%;
+  padding-left: 10px;
+  vertical-align: middle;
+}
+.blu i{
+  color:rgb(142,218,252);
+  background-color: white;
+  border-radius: 100%;
+  padding: 10px;
+  font-size: 20px;
+}
+.si{
+  line-height: 20px;
+  vertical-align: middle;
+}
+#span-text{
+  text-decoration:underline;
+}
+.search::after{
+  clear: both;
+  content: "";
+  display: table;
+}
+.search{
+  width:30%;
+  height: 65px;
+  line-height: 65px;
+  font-size: 15px;
+  text-align: center;
+  padding-left: 10px;
+  padding-top:10px;
+  background-color:rgb(250,250,250);
+}
+.search input{
+  width: 89%;
+  border: 0.5px solid lightgrey;
+  height: 35px;
+  padding-left: 10px;
+  float: left;
+  background-color: rgb(255,255,255);
+}
+.search button{
+  height: 35px;
+  width: 9%;
+  border: 0.5px solid lightgrey;
+  background-color: rgb(255,255,255);
+  float: left;
+}
+.search i{
+  color: rgb(177,177,177);
+}
+.name{
+  padding-top: 20px;
+}
+.name::after{
+  clear: both;
+  display: table;
+  content: "";
+}
+.name img{
+  float: left;
+  vertical-align: middle;
+}
+.name span{
+  float: left;
+}
+.ora{
+  float: right;
+}
