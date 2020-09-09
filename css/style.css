@@ -15,7 +15,7 @@ body{
 }
 .container{
   height: calc(100vh - 80px);
-  max-width: 1200px;
+  max-width: 1380px;
   margin:auto;
   background-color: white;
 }
@@ -162,7 +162,8 @@ main::after{
   font-size: 13px;
   display: inline-block;
   float: right;
-  padding-right: 10px;
+  margin-right: 10px;
+  margin-top: 20px;
 }
 .main-right{
   float: left;
@@ -194,4 +195,32 @@ main::after{
 }
 .chat input::placeholder{
   color: lightgrey;
+}
+.message-row{
+  display:flex;
+}
+.message{
+  max-width: 350px;
+  background-color: white;
+  border-radius: 15px;
+  padding:15px;
+  position: relative;
+  font-size: 20px;
+  margin: 20px 50px;
+}
+.message-ora{
+  position: absolute;
+  bottom:5px;
+  right:5px;
+  font-size: 15px;
+  color:lightgrey;
+}
+.message-row.send{
+  justify-content: flex-end;
+}
+.message-row.send .message{
+  background-color: rgb(213,249,186);
+}
+.template{
+  display:none;
 }
