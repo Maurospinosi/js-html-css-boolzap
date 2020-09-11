@@ -30,6 +30,66 @@ $(document).ready(function(){
     }
   );
 
+  $(document).on("click", ".show-mex-menu",
+   function(){
+     $(this).siblings(".show-mex-menu-si").toggle();
+   }
+  );
+  $(document).on("click", ".delate-mex",
+   function(){
+     $(this).parents(".message-row").remove();
+   }
+  );
+
+  $(document).on("click", ".contatto-1",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-uno").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-2",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-due").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-3",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-tre").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-4",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-quattro").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-5",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-cinque").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-6",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-sei").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-7",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-sette").addClass("active");
+   }
+  );
+  $(document).on("click", ".contatto-8",
+   function(){
+     $(".chat-contatto").removeClass("active");
+     $(".contatto-otto").addClass("active");
+   }
+  );
+
 });
 
 function sendMessage() {
@@ -56,7 +116,7 @@ function sendMessage() {
 }
 
 function timerFunction (){
-  var templatesmessage = $(".template .message").clone();
+  var templatesmessage = $(".template .message-row").clone();
   var date = new Date();
   var hours = date.getHours()
   var minutes = date.getMinutes()
@@ -68,7 +128,7 @@ function timerFunction (){
 
   templatesmessage.find(".message-text").text("Ok");
   templatesmessage.find(".message-ora").text(time);
-
+  templatesmessage.removeClass("send");
 
   $(".main-right").append(templatesmessage);
 }
