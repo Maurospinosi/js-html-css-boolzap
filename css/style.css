@@ -30,6 +30,9 @@ img{
 li{
   list-style: none;
 }
+.cursor{
+  cursor: pointer;
+}
 /* GENERALE */
 
 /* HEADER */
@@ -43,12 +46,13 @@ header{
   line-height: 100px;
   border-right: lightgrey solid 1px;
   padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
 }
 header img{
   vertical-align: middle;
 }
 .loghi-header{
-  float: right;
 }
 .loghi-header i{
   padding:0 8px;
@@ -61,6 +65,8 @@ header img{
   line-height: 100px;
   width:70%;
   padding: 0 15px;
+  display: flex;
+  justify-content: space-between;
 }
 .nome-accesso{
   line-height: 25px;
@@ -78,6 +84,8 @@ main::after{
   content: "";
   display: table;
 }
+
+/* Parte sx del Main */
 .main-left{
   width:30%;
   float: left;
@@ -208,6 +216,9 @@ main::after{
   position: relative;
   font-size: 20px;
   margin: 20px 50px;
+}
+.message{
+  max-width: 350px;
 }
 .message-ora{
   position: absolute;
