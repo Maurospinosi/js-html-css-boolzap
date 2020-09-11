@@ -56,7 +56,7 @@ function sendMessage() {
 }
 
 function timerFunction (){
-  var templatemessage = $(".template .message").clone();
+  var templatesmessage = $(".template .message").clone();
   var date = new Date();
   var hours = date.getHours()
   var minutes = date.getMinutes()
@@ -66,9 +66,9 @@ function timerFunction (){
    var time = hours + " : " + minutes;
   }
 
-  templatemessage.find(".message-text").text("Ok");
-  templatemessage.find(".message-ora").text(time);
+  templatesmessage.find(".message-text").text("Ok");
+  templatesmessage.find(".message-ora").text(time);
 
 
-  $(".main-right").append(templatemessage);
+  $(".main-right").append(templatesmessage);
 }
