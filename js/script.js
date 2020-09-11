@@ -21,6 +21,7 @@ $(document).ready(function(){
       contactName.each(function(){
         var names = $(this).text();
         names = names.toLowerCase();
+
         if (names.includes(searchInput) == true){
           $(this).parents(".access-name").show();
         } else {
@@ -45,48 +46,56 @@ $(document).ready(function(){
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-uno").addClass("active");
+     $(".pag-utente-1").addClass("active");
    }
   );
   $(document).on("click", ".contatto-2",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-due").addClass("active");
+     $(".pag-utente-2").addClass("active");
    }
   );
   $(document).on("click", ".contatto-3",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-tre").addClass("active");
+     $(".pag-utente-3").addClass("active");
    }
   );
   $(document).on("click", ".contatto-4",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-quattro").addClass("active");
+     $(".pag-utente-4").addClass("active");
    }
   );
   $(document).on("click", ".contatto-5",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-cinque").addClass("active");
+     $(".pag-utente-5").addClass("active");
    }
   );
   $(document).on("click", ".contatto-6",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-sei").addClass("active");
+     $(".pag-utente-6").addClass("active");
    }
   );
   $(document).on("click", ".contatto-7",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-sette").addClass("active");
+     $(".pag-utente-7").addClass("active");
    }
   );
   $(document).on("click", ".contatto-8",
    function(){
      $(".chat-contatto").removeClass("active");
      $(".contatto-otto").addClass("active");
+     $(".pag-utente-8").addClass("active");
    }
   );
 
@@ -109,7 +118,7 @@ function sendMessage() {
     templatemessage.find(".message-ora").text(time);
     templatemessage.addClass("send");
 
-    $(".main-right").append(templatemessage);
+    $(".active .main-right").append(templatemessage);
     $("#input-message").val("");
     setTimeout(timerFunction, 1000);
   }
@@ -130,5 +139,5 @@ function timerFunction (){
   templatesmessage.find(".message-ora").text(time);
   templatesmessage.removeClass("send");
 
-  $(".main-right").append(templatesmessage);
+  $(".active .main-right").append(templatesmessage);
 }
