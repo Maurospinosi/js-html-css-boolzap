@@ -1,21 +1,21 @@
 $(document).ready(function(){
 
-  $(".send-message").click(
+  $(".send-message").click(  // Funzione per inviare i messaggi con il click sull'icona
     function () {
       sendMessage();
     }
   );
-  $("#input-message").keyup(
+  $("#input-message").keyup( // Funzione per inviare i messaggi con invio
     function (event) {
       if(event.which == 13){
         sendMessage();
       }
     }
   );
-  $("#search-name").keyup(
+  $("#search-name").keyup(  //Funzione per cercare i contatti nella barra di ricerca
     function () {
 
-      var searchInput = $(this).val();
+      var searchInput = $(this).val().toLowerCase();
       var contactName = $(".access-name .contact-nome");
 
       contactName.each(function(){
@@ -31,17 +31,18 @@ $(document).ready(function(){
     }
   );
 
-  $(document).on("click", ".show-mex-menu",
-   function(){
-     $(this).siblings(".show-mex-menu-si").toggle();
-   }
-  );
-  $(document).on("click", ".delate-mex",
+ $(document).on("click", ".show-mex-menu", // funzione per mostrare il "menù messaggi" : info messaggio, cancella messaggio
+  function(){
+    $(this).siblings(".show-mex-menu-si").toggle();
+  }
+);
+  $(document).on("click", ".delate-mex",  //Funzione per cancellare un messagio
    function(){
      $(this).parents(".message-row").remove();
    }
   );
 
+  //Funzioni per cambiare la chat in base al contatto cliccato
   $(document).on("click", ".contatto-1",
    function(){
      $(".chat-contatto").removeClass("active");
@@ -101,6 +102,7 @@ $(document).ready(function(){
 
 });
 
+//Funzione che invia un messaggio scritto dall'utente nella barra input , clona la riga e "appende" tutto nella chat
 function sendMessage() {
  var inputText = $("#input-message").val();
   if(inputText != ""){
@@ -120,10 +122,27 @@ function sendMessage() {
 
     $(".active .main-right").append(templatemessage);
     $("#input-message").val("");
-    setTimeout(timerFunction, 1000);
+    setTimeout(mexFunction, 1500);
+    setTimeout(returnFunction, 3000);
+    setTimeout(timerFunction, 2800);
   }
 }
 
+function mexFunction(){
+  $(".active .accesss").text("Sta scrivendo....");
+}
+function returnFunction(){
+  var date = new Date();
+  var hours = date.getHours()
+  var minutes = date.getMinutes()
+  if(minutes<10){
+   var time = hours + " : " + "0" + minutes;
+  } else{
+   var time = hours + " : " + minutes;
+  }
+  $(".active .accesss").text("Utimo acesso oggi alle ore" + " " + time);
+}
+// Funzione che dopo 1 sec (vedi funzione timerFunction riga 125) stampa come risposta "ok" tutto con orari aggiornati
 function timerFunction (){
   var templatesmessage = $(".template .message-row").clone();
   var date = new Date();
